@@ -32,7 +32,7 @@ export default function RootLayout({
         <iframe
           id='myIframe'
           allow='microphone'
-          src='https://www.staging-app.exei.ai/sdk/682325667a186a094810c8c5?mic=true&channelType=IFRAME&API_KEY=f93338c38a914b1cae136e390095a0d8'
+          src='https://sdk.exei.ai/sdk/676edbc2d52cd8e6c1ab86fe?mic=true&channelType=IFRAME&API_KEY=1abcfbc6d924466b9ceb82860f522063'
           style={{
             position: 'fixed',
             bottom: '85px',
@@ -47,8 +47,8 @@ export default function RootLayout({
           <p>Your browser does not support iframes.</p>
         </iframe>
         <Script
-          src='https://exei-bkt-important-object.s3.ap-south-1.amazonaws.com/script-staging.js'
-          // src='/script.js'
+          // src='https://exei-bkt-important-object.s3.ap-south-1.amazonaws.com/script-staging.js'
+          src='/script.js'
           strategy='afterInteractive' 
         />
 

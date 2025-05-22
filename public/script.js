@@ -5,7 +5,7 @@ const mainBox = document.createElement("div"),
   chatBoxImage = document.createElement("img"),
   chatBoxCloseIcon = document.createElement("img"),
   chatBoxTextClose = document.createElement("button"),
-  BACKEND_BASE_URL = "https://qa-api.exei.ai";
+  BACKEND_BASE_URL = "https://api.exei.ai";
 
 const updateTextDivWidth = () => {
   if (window.innerWidth <= 480) {
