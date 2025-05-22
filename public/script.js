@@ -5,7 +5,7 @@ const mainBox = document.createElement("div"),
   chatBoxImage = document.createElement("img"),
   chatBoxCloseIcon = document.createElement("img"),
   chatBoxTextClose = document.createElement("button"),
-  BACKEND_BASE_URL = "https://staging-api.exei.ai";
+  BACKEND_BASE_URL = "https://qa-api.exei.ai";
 
 const updateTextDivWidth = () => {
   if (window.innerWidth <= 480) {
@@ -129,9 +129,9 @@ fetch(`${BACKEND_BASE_URL}/project/${id}`)
   .then((t) => t.json())
   .then((t) => {
     chatBoxImage.src = t.s3Response.Location;
-    chatBoxTextContent.textContent = t?.labelText || t?.greet;
+    chatBoxTextContent.textContent = t?.labelText;
     settingsDataVariable = t;
-    console.log(t?.selectedFont);
+    console.log(t?.selectedFont, t);
     loadGoogleFont(t?.selectedFont || "Poppins");
   })
   .catch((t) => {
