@@ -4,6 +4,7 @@ const mainBox = document.createElement("div"),
   chatBox = document.createElement("div"),
   chatBoxImage = document.createElement("img"),
   chatBoxCloseIcon = document.createElement("img"),
+  chatBoxTextClose = document.createElement("button"),
   BACKEND_BASE_URL = "https://staging-api.exei.ai";
 
 const updateTextDivWidth = () => {
@@ -23,7 +24,7 @@ setTimeout(() => {
 }, 100);
 window.addEventListener("resize", updateTextDivWidth);
 
-chatBoxCloseIcon.id = "chatBoxId";
+chatBoxTextClose.id = "chatBoxId";
 mainBox.id = "mainBox";
 mainBox.style.display = "flex";
 mainBox.style.flexDirection = "row";
@@ -48,6 +49,7 @@ chatBoxTextdiv.style.border = "1px solid gray";
 chatBoxTextdiv.style.padding = "9px 33px 7px 13px";
 chatBoxTextdiv.style.borderRadius = "20px";
 chatBoxTextdiv.style.position = "relative";
+chatBoxTextdiv.style.maxHeight = '130px';
 
 chatBox.id = "chatBox";
 chatBox.style.display = "flex";
@@ -64,24 +66,28 @@ chatBox.style.border = "1px solid gray";
 chatBox.style.zIndex = 99999;
 chatBox.style.cursor = "pointer";
 
-chatBoxCloseIcon.onclick = () => {
+chatBoxTextClose.onclick = () => {
   chatBoxTextdiv.style.display = "none";
 };
 
-chatBoxCloseIcon.style.position = "absolute";
-chatBoxCloseIcon.style.top = "5px";
-chatBoxCloseIcon.style.right = "5px";
-chatBoxCloseIcon.style.width = "20px";
-chatBoxCloseIcon.style.height = "20px";
-chatBoxCloseIcon.style.padding = "2px";
-chatBoxCloseIcon.style.display = "flex";
-chatBoxCloseIcon.style.alignItems = "center";
-chatBoxCloseIcon.style.justifyContent = "center";
-chatBoxCloseIcon.style.border = "none";
-chatBoxCloseIcon.style.cursor = "pointer";
-chatBoxCloseIcon.style.fontSize = "16px";
-chatBoxCloseIcon.style.color = "#333";
-chatBoxCloseIcon.style.background = "transparent";
+chatBoxTextClose.style.position = "absolute";
+chatBoxTextClose.style.top = "5px";
+chatBoxTextClose.style.right = "5px";
+chatBoxTextClose.style.width = "20px";
+chatBoxTextClose.style.height = "20px";
+chatBoxTextClose.style.padding = "2px";
+chatBoxTextClose.style.display = "flex";
+chatBoxTextClose.style.alignItems = "center";
+chatBoxTextClose.style.justifyContent = "center";
+chatBoxTextClose.style.border = "none";
+chatBoxTextClose.style.cursor = "pointer";
+chatBoxTextClose.style.fontSize = "16px";
+chatBoxTextClose.style.color = "#333";
+chatBoxTextClose.style.background = "transparent";
+
+chatBoxCloseIcon.style.height = '25px';
+chatBoxCloseIcon.style.width = '25px';
+
 
 chatBoxImage.id = "chatBoxImage";
 
@@ -144,7 +150,8 @@ chatBoxCloseIcon.style.borderRadius = "9999px";
 mainBox.append(chatBoxTextdiv);
 mainBox.append(chatBox);
 chatBoxTextdiv.appendChild(chatBoxTextContent);
-chatBoxTextdiv.appendChild(chatBoxCloseIcon);
+chatBoxTextdiv.appendChild(chatBoxTextClose);
+chatBoxTextClose.appendChild(chatBoxCloseIcon)
 chatBox.appendChild(chatBoxImage);
 document.body.appendChild(mainBox);
 
