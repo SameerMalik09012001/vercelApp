@@ -49,7 +49,7 @@ export default function RootLayout({
         <Script
           // src='https://exei-bkt-important-object.s3.ap-south-1.amazonaws.com/script-qa-minified.js'
           src='/script.js'
-          strategy='afterInteractive'
+          strategy='afterInteractive' 
         />
 
         {children}
