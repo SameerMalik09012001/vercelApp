@@ -32,7 +32,7 @@ export default function RootLayout({
         <iframe
           id='myIframe'
           allow='microphone'
-          src='https://www.qa-app.exei.ai/sdk/681c98fedd49d14d35176712?mic=true&channelType=IFRAME&API_KEY=426acd05681c48108970c5c22fcf7131'
+          src='https://www.qa-app.exei.ai/sdk/6810b38c3fa07f7e628266d0?mic=true&channelType=WEBSITE&API_KEY=eb7096c1f5bb4a4d9f6da388310d249a'
           style={{
             position: 'fixed',
             bottom: '85px',
@@ -43,9 +43,12 @@ export default function RootLayout({
             zIndex: 9999,
           }}
           title='Exei SDK'
-        />
+        >
+          <p>Your browser does not support iframes.</p>
+        </iframe>
         <Script
-          src='https://exei-qa-bucket.s3.us-east-2.amazonaws.com/public/script.js'
+          src='https://exei-bkt-important-object.s3.ap-south-1.amazonaws.com/script-qa-minified.js'
+          // src='/script.js'
           strategy='afterInteractive'
         />
 
