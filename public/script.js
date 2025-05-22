@@ -4,7 +4,7 @@ const mainBox = document.createElement("div"),
   chatBox = document.createElement("div"),
   chatBoxImage = document.createElement("img"),
   chatBoxCloseIcon = document.createElement("img"),
-  BACKEND_BASE_URL = "https://qa-api.exei.ai";
+  BACKEND_BASE_URL = "https://staging-api.exei.ai";
 
 const updateTextDivWidth = () => {
   if (window.innerWidth <= 480) {
@@ -32,7 +32,6 @@ mainBox.style.position = "fixed";
 mainBox.style.bottom = "20px";
 mainBox.style.right = "20px";
 mainBox.style.padding = "10px";
-mainBox.style.zIndex = 99999;
 mainBox.style.borderRadius = "10px";
 mainBox.style.zIndex = 99999;
 mainBox.style.gap = "10px";
