@@ -28,30 +28,31 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Chatbot iframe */}
         <iframe
-          id='myIframe'
-          allow='microphone'
-          src='https://sdk.exei.ai/sdk/676edbc2d52cd8e6c1ab86fe?mic=true&channelType=IFRAME&API_KEY=1abcfbc6d924466b9ceb82860f522063'
+          id="myIframe"
+          allow="microphone"
+          src="https://www.qa-app.exei.ai/sdk/68a5736d056b84c0782ac501?mic=true&channelType=WEBSITE&API_KEY=e7597b95ae7b4e05b2407c5127ce49a4"
+          title="Exei SDK"
           style={{
-            position: 'fixed',
-            bottom: '85px',
-            right: '20px',
-            width: '400px',
-            height: '70%',
-            border: 'none',
+            position: "fixed",
+            bottom: "85px",
+            right: "20px",
+            width: "0px",
+            height: "0px",
+            border: "none",
             zIndex: 9999,
+            display: "block",
+            background: "transparent",
+            borderRadius: "20px",
           }}
-          title='Exei SDK'
         >
           <p>Your browser does not support iframes.</p>
         </iframe>
-        <Script
-          // src='https://exei-bkt-important-object.s3.ap-south-1.amazonaws.com/script-staging.js'
-          src='/script.js'
-          strategy='afterInteractive' 
-        />
 
+        <Script
+          src='https://iframe-cdn.exei.ai/script-qa-minified.js' 
+          strategy='afterInteractive'
+        />
         {children}
       </body>
     </html>
